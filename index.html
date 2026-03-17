@@ -30,60 +30,21 @@
                 <a href="#connect" onclick="smoothScrollTo('connect')" class="nav-link text-zinc-400 hover:text-white transition-colors">Connect</a>
             </div>
 
-            <div class="flex items-center gap-x-4">
-                <!-- External Quick Links -->
+            <div class="flex items-center gap-x-2">
                 <a href="https://www.linkedin.com/in/prateek-dutta-3622821a1/" target="_blank" 
-                   class="hidden sm:flex items-center gap-x-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-2xl text-sm font-medium transition-all">
+                   class="flex items-center gap-x-2 px-3 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-2xl text-xs font-medium transition-all">
                     <i class="fab fa-linkedin text-blue-400"></i>
-                    <span>LinkedIn</span>
+                    <span class="hidden sm:inline">LinkedIn</span>
                 </a>
-                
-                <button onclick="toggleMobileMenu()" 
-                        class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-
-            <div class="flex items-center gap-x-4">
-                <!-- External Quick Links -->
                 <a href="https://scholar.google.com/citations?user=7r9YlCsAAAAJ&amp;hl=en" target="_blank" 
-                   class="hidden sm:flex items-center gap-x-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-2xl text-sm font-medium transition-all">
+                   class="flex items-center gap-x-2 px-3 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-2xl text-xs font-medium transition-all">
                     <i class="fab fa-google text-blue-400"></i>
-                    <span>Google Scholar</span>
+                    <span class="hidden sm:inline">Google Scholar</span>
                 </a>
-                
-                <button onclick="toggleMobileMenu()" 
-                        class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
-                    <i class="fas fa-bars"></i>
-                </button>
             </div>
             
         </div>
         
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-zinc-950 border-t border-zinc-800">
-            <div class="px-6 py-8 flex flex-col gap-y-6 text-lg">
-                <a href="#about" onclick="smoothScrollTo('about');toggleMobileMenu()" class="hover:text-yellow-400">About</a>
-                <a href="#experience" onclick="smoothScrollTo('experience');toggleMobileMenu()" class="hover:text-yellow-400">Experience</a>
-                <a href="#skills" onclick="smoothScrollTo('skills');toggleMobileMenu()" class="hover:text-yellow-400">Skills</a>
-                <a href="#achievements" onclick="smoothScrollTo('achievements');toggleMobileMenu()" class="hover:text-yellow-400">Achievements</a>
-                <a href="#projects" onclick="smoothScrollTo('projects');toggleMobileMenu()" class="hover:text-yellow-400">Projects</a>
-                <a href="#connect" onclick="smoothScrollTo('connect');toggleMobileMenu()" class="hover:text-yellow-400">Connect</a>
-                
-                <!-- <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
-                    <a href="https://prateekdutta2001.github.io/portfolio/" target="_blank"
-                       class="flex items-center justify-center gap-x-3 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-semibold rounded-3xl">
-                        <i class="fas fa-briefcase"></i>
-                        View Portfolio
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=7r9YlCsAAAAJ&amp;hl=en" target="_blank"
-                       class="flex items-center justify-center gap-x-3 py-4 border border-yellow-400 text-yellow-400 font-medium rounded-3xl">
-                        <i class="fas fa-book"></i>
-                        Research Papers
-                    </a>
-                </div> -->
-            </div>
-        </div>
     </nav>
 
     <!-- HERO -->
