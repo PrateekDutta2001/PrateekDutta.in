@@ -20,4 +20,6 @@ Get access: https://prateekdutta2001.github.io/PrateekDutta.in/
 
 ## 📌 License
 
-Distributed under [MIT License](LICENSE) (if you want to add one).
+MIT License
+
+Copyright (c) 2026 Prateek Dutta
