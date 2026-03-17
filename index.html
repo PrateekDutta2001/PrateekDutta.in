@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek Dutta | Sr. AI Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tail-container bg-zinc-950 text-zinc-200">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center text-black font-bold text-2xl logo-font">P</div>
+                <!-- <div>
+                    <span class="logo-font text-2xl font-semibold tracking-tighter text-white">Prateek</span>
+                    <span class="logo-font text-2xl font-semibold tracking-tighter text-yellow-400">Dutta</span>
+                </div> -->
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" onclick="smoothScrollTo('about')" class="nav-link text-zinc-400 hover:text-white transition-colors">About</a>
+                <a href="#experience" onclick="smoothScrollTo('experience')" class="nav-link text-zinc-400 hover:text-white transition-colors">Experience</a>
+                <a href="#skills" onclick="smoothScrollTo('skills')" class="nav-link text-zinc-400 hover:text-white transition-colors">Skills</a>
+                <a href="#achievements" onclick="smoothScrollTo('achievements')" class="nav-link text-zinc-400 hover:text-white transition-colors">Achievements</a>
+                <a href="#projects" onclick="smoothScrollTo('projects')" class="nav-link text-zinc-400 hover:text-white transition-colors">Projects</a>
+                <a href="#connect" onclick="smoothScrollTo('connect')" class="nav-link text-zinc-400 hover:text-white transition-colors">Connect</a>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <!-- External Quick Links -->
+                <a href="https://www.linkedin.com/in/prateek-dutta-3622821a1/" target="_blank" 
+                   class="hidden sm:flex items-center gap-x-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-2xl text-sm font-medium transition-all">
+                    <i class="fab fa-linkedin text-blue-400"></i>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <button onclick="toggleMobileMenu()" 
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-zinc-950 border-t border-zinc-800">
+            <div class="px-6 py-8 flex flex-col gap-y-6 text-lg">
+                <a href="#about" onclick="smoothScrollTo('about');toggleMobileMenu()" class="hover:text-yellow-400">About</a>
+                <a href="#experience" onclick="smoothScrollTo('experience');toggleMobileMenu()" class="hover:text-yellow-400">Experience</a>
+                <a href="#skills" onclick="smoothScrollTo('skills');toggleMobileMenu()" class="hover:text-yellow-400">Skills</a>
+                <a href="#achievements" onclick="smoothScrollTo('achievements');toggleMobileMenu()" class="hover:text-yellow-400">Achievements</a>
+                <a href="#projects" onclick="smoothScrollTo('projects');toggleMobileMenu()" class="hover:text-yellow-400">Projects</a>
+                <a href="#connect" onclick="smoothScrollTo('connect');toggleMobileMenu()" class="hover:text-yellow-400">Connect</a>
+                
+                <div class="pt-6 border-t border-zinc-800 flex flex-col gap-3">
+                    <a href="https://prateekdutta2001.github.io/portfolio/" target="_blank"
+                       class="flex items-center justify-center gap-x-3 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-semibold rounded-3xl">
+                        <i class="fas fa-briefcase"></i>
+                        View Portfolio
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=7r9YlCsAAAAJ&amp;hl=en" target="_blank"
+                       class="flex items-center justify-center gap-x-3 py-4 border border-yellow-400 text-yellow-400 font-medium rounded-3xl">
+                        <i class="fas fa-book"></i>
+                        Research Papers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-x-3 bg-zinc-900 text-yellow-400 text-sm font-medium px-6 py-3 rounded-3xl border border-yellow-400/30">
+                    <div class="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+                    Bengaluru, India
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-none logo-font">
+                    PRATEEK DUTTA
+                    <!-- <br><span class="text-yellow-400">Dutta</span> -->
+                </h1>
+                
+                <p class="text-2xl text-zinc-400 font-light">Sr. AI Developer &amp; Generative AI Architect</p>
+                
+                <p class="max-w-lg text-lg text-zinc-400">
+                    3.8+ years building production-grade AI systems. 
+                    <span class="font-semibold text-yellow-300">Processed 500,000+ users daily</span> with real-time facial biometrics • 
+                    Reduced production TAT by <span class="font-semibold text-yellow-300">50-60%</span> with AI automation.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://prateekdutta2001.github.io/portfolio/" target="_blank"
+                       class="flex-1 md:flex-none px-8 py-5 bg-yellow-400 hover:bg-amber-400 text-black font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all shadow-xl shadow-yellow-400/30">
+                        <i class="fas fa-external-link-alt"></i>
+                        Explore Portfolio
+                    </a>
+                    
+                    <a href="https://topmate.io/prateek_dutta" target="_blank"
+                       class="flex-1 md:flex-none px-8 py-5 border-2 border-yellow-400 hover:bg-yellow-400 hover:text-black font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all">
+                        <i class="fas fa-calendar"></i>
+                        Book Guidance Session
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-x-8 text-sm pt-6">
+                    <a href="https://www.linkedin.com/in/prateek-dutta-3622821a1/" target="_blank" class="flex items-center gap-x-2 hover:text-yellow-400">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                        <span class="hidden sm:inline">LinkedIn</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=7r9YlCsAAAAJ&amp;hl=en" target="_blank" class="flex items-center gap-x-2 hover:text-yellow-400">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                        <span class="hidden sm:inline">Google Scholar</span>
+                    </a>
+                    <a href="mailto:prateekdutta2001@gmail.com" class="flex items-center gap-x-2 hover:text-yellow-400">
+                        <i class="fas fa-envelope text-2xl"></i>
+                        <span class="hidden sm:inline">Email</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right side visual -->
+            <div class="hidden md:flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 bg-gradient-to-br from-yellow-400/10 to-transparent rounded-[4rem] rotate-12 flex items-center justify-center">
+                        <div class="w-72 h-72 bg-zinc-900 rounded-3xl flex items-center justify-center border border-yellow-400/30 shadow-2xl">
+                            <div class="text-center">
+                                <div class="w-40 h-40 mx-auto bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center text-8xl font-black text-black logo-font mb-6">PD</div>
+                                <div class="text-yellow-400 text-3xl font-bold logo-font tracking-tighter">AI</div>
+                                <div class="text-xs uppercase tracking-[4px] text-zinc-500 mt-1">Engineer • Innovator</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating badges -->
+                    <div class="absolute -top-6 -left-8 bg-zinc-900 border border-yellow-400/50 text-yellow-400 text-xs font-mono px-4 py-2 rounded-2xl shadow-xl">
+                        AI Solution Architect
+                    </div>
+                    <div class="absolute -bottom-8 right-8 bg-zinc-900 border border-yellow-400/50 text-yellow-400 text-xs font-mono px-4 py-2 rounded-2xl shadow-xl">
+                        Data Scientist
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center gap-y-2 text-xs text-zinc-500">
+            <div class="animate-bounce">↓</div>
+            <span>Scroll to discover</span>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-12 gap-16">
+            <div class="md:col-span-7">
+                <div class="section-header">
+                    <span class="uppercase text-yellow-400 text-sm font-medium tracking-widest">Who I am</span>
+                    <h2 class="text-5xl font-semibold tracking-tighter logo-font mt-3">Data &amp; AI Developer with impact</h2>
+                </div>
+                
+                <div class="mt-10 text-lg leading-relaxed text-zinc-300">
+                    Seasoned Data &amp; AI Developer with <span class="font-semibold">3.8 years</span> delivering transformative solutions across Aviation, 
+                    Healthcare, Finance, and Public Sector projects. 
+                    Currently leading AI automation at <span class="font-semibold text-yellow-300">KPMG India</span>.
+                </div>
+                
+                <div class="mt-8 grid grid-cols-2 gap-6">
+                    <div class="bg-zinc-900 rounded-3xl p-8">
+                        <div class="text-5xl font-bold text-yellow-400">500K+</div>
+                        <div class="text-sm uppercase tracking-widest mt-1">Users processed daily</div>
+                        <div class="text-zinc-400 mt-6 text-sm">Real-time facial biometric system for Government of India’s DigiYatra</div>
+                    </div>
+                    <div class="bg-zinc-900 rounded-3xl p-8">
+                        <div class="text-5xl font-bold text-yellow-400">50-60%</div>
+                        <div class="text-sm uppercase tracking-widest mt-1">TAT Reduction</div>
+                        <div class="text-zinc-400 mt-6 text-sm">AI-powered workflow automation &amp; bootstrap AI code editor</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5 bg-zinc-900 rounded-3xl p-10 text-sm leading-relaxed">
+                <div class="flex gap-x-4 text-yellow-400 mb-8">
+                    <i class="fas fa-star text-3xl"></i>
+                    <i class="fas fa-star text-3xl"></i>
+                    <i class="fas fa-star text-3xl"></i>
+                </div>
+                <p class="italic">"Spearheaded scalable AI models and real-time biometric systems while building a team of AI professionals. Passionate about research, agentic systems, and making AI accessible through tutorials."</p>
+                <div class="mt-12 text-xs uppercase font-medium">— Prateek Dutta</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="bg-black py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-header mb-16">
+                <span class="uppercase text-yellow-400 text-sm font-medium tracking-widest">Journey</span>
+                <h2 class="text-5xl font-semibold tracking-tighter logo-font">Experience</h2>
+            </div>
+            
+            <div class="space-y-16">
+                <!-- KPMG -->
+                <div class="grid md:grid-cols-12 gap-8 items-start card-hover bg-zinc-900 rounded-3xl p-8 md:p-10">
+                    <div class="md:col-span-4">
+                        <div class="text-yellow-400 font-medium">May 2024 – Present</div>
+                        <div class="text-2xl font-semibold mt-3">Sr. AI Developer</div>
+                        <div class="text-zinc-400">KPMG India • Bengaluru</div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <ul class="space-y-4 text-zinc-300">
+                            <li class="flex gap-x-4">
+                                <span class="text-yellow-400 text-xl">•</span>
+                                Automated workflows using Sentence-BERT, OpenAI Embeddings, Ollama &amp; vLLM — reduced TAT by 50-60%
+                            </li>
+                            <li class="flex gap-x-4">
+                                <span class="text-yellow-400 text-xl">•</span>
+                                Leading AI &amp; Data team building LLM agents, RAG pipelines, and Business Development tools
+                            </li>
+                        </ul>
+                        <a href="https://www.linkedin.com/in/prateek-dutta-3622821a1/" target="_blank"
+                           class="mt-8 inline-flex items-center gap-x-3 text-sm font-medium text-yellow-400 hover:text-amber-400">
+                            Full experience &amp; recommendations on LinkedIn 
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dataevolve -->
+                <div class="grid md:grid-cols-12 gap-8 items-start card-hover bg-zinc-900 rounded-3xl p-8 md:p-10">
+                    <div class="md:col-span-4">
+                        <div class="text-yellow-400 font-medium">Jun 2023 – Apr 2024</div>
+                        <div class="text-2xl font-semibold mt-3">Machine Learning Engineer</div>
+                        <div class="text-zinc-400">Dataevolve Solutions • Hyderabad</div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <ul class="space-y-4 text-zinc-300">
+                            <li class="flex gap-x-4">
+                                <span class="text-yellow-400 text-xl">•</span>
+                                Built contactless air check-in biometric system (DigiYatra) for Central Government of India
+                            </li>
+                            <li class="flex gap-x-4">
+                                <span class="text-yellow-400 text-xl">•</span>
+                                Real-time face recognition POC for Passport &amp; Visa services
+                            </li>
+                        </ul>
+                        <a href="https://www.linkedin.com/in/prateek-dutta-3622821a1/" target="_blank"
+                           class="mt-8 inline-flex items-center gap-x-3 text-sm font-medium text-yellow-400 hover:text-amber-400">
+                            Full experience &amp; recommendations on LinkedIn 
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Konverge -->
+                <div class="grid md:grid-cols-12 gap-8 items-start card-hover bg-zinc-900 rounded-3xl p-8 md:p-10">
+                    <div class="md:col-span-4">
+                        <div class="text-yellow-400 font-medium">Jul 2022 – Mar 2023</div>
+                        <div class="text-2xl font-semibold mt-3">Data Science Engineer</div>
+                        <div class="text-zinc-400">Konverge.AI • Nagpur</div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <ul class="space-y-4 text-zinc-300">
+                            <li class="flex gap-x-4">
+                                <span class="text-yellow-400 text-xl">•</span>
+                                Developed Text-2-Video synthesis platform with custom avatars using GANs &amp; Graph Neural Networks
+                            </li>
+                        </ul>
+                        <a href="https://www.linkedin.com/in/prateek-dutta-3622821a1/" target="_blank"
+                           class="mt-8 inline-flex items-center gap-x-3 text-sm font-medium text-yellow-400 hover:text-amber-400">
+                            Full experience &amp; recommendations on LinkedIn 
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="section-header mb-16">
+            <span class="uppercase text-yellow-400 text-sm font-medium tracking-widest">Expertise</span>
+            <h2 class="text-5xl font-semibold tracking-tighter logo-font">Core Skills</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <!-- Computational -->
+            <div class="bg-zinc-900 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-8">
+                    <div class="w-10 h-10 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Computational &amp; ML</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Machine Learning</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Deep Learning</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Computer Vision</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">NLP</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">TensorFlow</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">BERT</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Python</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Transfer Learning</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">ResNet</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">EfficientNet</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Inception</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">VGG</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Model Finetuning (LoRA / QLoRA / PEFT)</span>
+                </div>
+            </div>
+            
+            <!-- Generative AI -->
+            <div class="bg-zinc-900 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-8">
+                    <div class="w-10 h-10 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Generative AI</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">LangChain</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">LlamaIndex</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">RAG</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Knowledge Graph + LLM</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Ollama</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">CrewAI</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">LangGraph</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Mistral</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Gemma</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Falcon</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Hugging Face</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Prompt Engineering</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">OpenAI</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">XAI</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Semantic Kernel</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">AutoGen</span>
+                </div>
+            </div>
+            
+            <!-- Vector + MLOps -->
+            <div class="bg-zinc-900 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-8">
+                    <div class="w-10 h-10 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Vector Databases &amp; MLOps</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Pinecone</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Weaviate</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Milvus</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">FAISS</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Chroma</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Model Serving</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Monitoring</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Prompt/Response Logging</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Feedback Loops</span>
+                </div>
+            </div>
+            
+            <!-- Data/Cloud + Soft -->
+            <div class="bg-zinc-900 rounded-3xl p-8">
+                <div class="flex items-center gap-x-4 mb-8">
+                    <div class="w-10 h-10 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl">Data/Cloud/Soft Skills</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">PowerBI</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">QuickSight</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">SQL</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Dash</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Tableau</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">AWS</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Leadership</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Adaptability</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Problem Solving</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Teamwork</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">Research &amp; Development</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">HTML/CSS/JS</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">MS Word</span>
+                    <span class="skill-tag bg-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-3xl">MS Excel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="bg-zinc-950 py-24 border-t border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <div class="section-header">
+                        <h2 class="text-5xl font-semibold tracking-tighter logo-font">Research &amp; Recognition</h2>
+                    </div>
+                    <div class="mt-12 space-y-10">
+                        <div class="flex gap-x-6">
+                            <div class="text-6xl font-black text-yellow-400/30">23</div>
+                            <div>
+                                <div class="font-semibold text-xl">Research Papers</div>
+                                <div class="text-zinc-400">Published in IEEE, SCI, Springer, Scopus &amp; AIP</div>
+                                <a href="https://scholar.google.com/citations?user=7r9YlCsAAAAJ&amp;hl=en" target="_blank" 
+                                   class="text-yellow-400 text-sm mt-4 inline-flex items-center gap-x-2 hover:underline">
+                                    View on Google Scholar →
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-x-6">
+                            <div class="text-6xl font-black text-yellow-400/30">2</div>
+                            <div>
+                                <div class="font-semibold text-xl">Books Published</div>
+                                <div class="text-zinc-400">Python with AIML &amp; Introduction to AI Applications</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-x-6">
+                            <div class="text-6xl font-black text-yellow-400/30">1</div>
+                            <div>
+                                <div class="font-semibold text-xl">Indian Patent</div>
+                                <div class="text-zinc-400">AI-Based Disease Diagnostic System (Inventor)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-900 rounded-3xl p-10">
+                    <div class="uppercase text-xs tracking-widest mb-6 text-yellow-400">Key Impact Highlights</div>
+                    <ul class="space-y-8 text-zinc-300">
+                        <li class="flex items-start gap-x-5">
+                            <span class="text-3xl mt-1">🚀</span>
+                            <div>Built real-time facial biometric validation for Government of India’s DigiYatra project</div>
+                        </li>
+                        <li class="flex items-start gap-x-5">
+                            <span class="text-3xl mt-1">⚡</span>
+                            <div>Developed production-ready AI code editor that cuts development time by 50-60%</div>
+                        </li>
+                        <li class="flex items-start gap-x-5">
+                            <span class="text-3xl mt-1">📈</span>
+                            <div>Led team of AI professionals delivering LLM, RAG &amp; Agentic solutions at KPMG</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="section-header mb-16">
+            <span class="uppercase text-yellow-400 text-sm font-medium tracking-widest">Builds &amp; Demos</span>
+            <h2 class="text-5xl font-semibold tracking-tighter logo-font">Featured Work</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Portfolio -->
+            <a href="https://prateekdutta2001.github.io/portfolio/" target="_blank" 
+               class="group bg-zinc-900 rounded-3xl overflow-hidden card-hover">
+                <div class="h-56 bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center">
+                    <div class="text-black text-7xl font-black logo-font group-hover:scale-110 transition-transform">Portfolio</div>
+                </div>
+                <div class="p-8">
+                    <div class="font-semibold text-xl">My Complete Portfolio</div>
+                    <div class="text-zinc-400 text-sm mt-2 line-clamp-3">
+                        Shambhu.AI (Code Gen), AirID-Check (DigiYatra), Calculas.AI, MetaLens.AI and 12+ more production-ready AI products
+                    </div>
+                    <div class="mt-8 text-yellow-400 text-sm flex items-center gap-x-2">
+                        View all 15+ projects 
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- ModelX -->
+            <a href="https://prateekdutta2001.github.io/ModelX/" target="_blank" 
+               class="group bg-zinc-900 rounded-3xl overflow-hidden card-hover">
+                <div class="h-56 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-5xl font-black">ModelX</div>
+                        <div class="text-xs tracking-widest mt-1">v2026</div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="font-semibold text-xl">AI Models Compendium</div>
+                    <div class="text-zinc-400 text-sm mt-2">Comprehensive guide to 50+ AI models across 12 categories with 200+ real use cases</div>
+                    <div class="mt-8 text-yellow-400 text-sm flex items-center gap-x-2">
+                        Explore now →
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Devlytics -->
+            <a href="https://prateekdutta2001.github.io/Devlytics/" target="_blank" 
+               class="group bg-zinc-900 rounded-3xl overflow-hidden card-hover">
+                <div class="h-56 bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                    <div class="text-white text-5xl font-black">Devlytics</div>
+                </div>
+                <div class="p-8">
+                    <div class="font-semibold text-xl">Analytics &amp; Development Guide</div>
+                    <div class="text-zinc-400 text-sm mt-2">Curated learning paths for Data Analytics, BI, ML, and modern web development</div>
+                    <div class="mt-8 text-yellow-400 text-sm flex items-center gap-x-2">
+                        Explore now →
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Intelligence.Agent -->
+            <a href="https://prateekdutta2001.github.io/Intelligence.Agent/" target="_blank" 
+               class="group bg-zinc-900 rounded-3xl overflow-hidden card-hover">
+                <div class="h-56 bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center">
+                    <div class="text-white text-center text-4xl font-black leading-none">Agentic<br>AI</div>
+                </div>
+                <div class="p-8">
+                    <div class="font-semibold text-xl">Intelligence.Agent</div>
+                    <div class="text-zinc-400 text-sm mt-2">Master real-world AI Agents • From fundamentals to advanced RAG &amp; autonomous systems</div>
+                    <div class="mt-8 text-yellow-400 text-sm flex items-center gap-x-2">
+                        Explore now →
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- CERTS & EDUCATION -->
+    <section class="bg-black py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <!-- Education -->
+            <div>
+                <div class="uppercase text-xs text-yellow-400 tracking-widest mb-6">Education</div>
+                <div class="bg-zinc-900 rounded-3xl p-10">
+                    <div class="text-3xl font-semibold">B.Tech in Artificial Intelligence</div>
+                    <div class="text-zinc-400 mt-2">2019 – 2023</div>
+                    <div class="mt-8 text-lg">G H Raisoni College of Engineering, Nagpur</div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div>
+                <div class="uppercase text-xs text-yellow-400 tracking-widest mb-6">Certifications</div>
+                <div class="space-y-6">
+                    <div class="flex gap-x-6 items-center bg-zinc-900 rounded-3xl px-8 py-6">
+                        <i class="fas fa-certificate text-4xl text-yellow-400"></i>
+                        <div>
+                            <div class="font-medium">Technical Product Management</div>
+                            <div class="text-sm text-zinc-400">IIBA • PMI</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-6 items-center bg-zinc-900 rounded-3xl px-8 py-6">
+                        <i class="fas fa-certificate text-4xl text-yellow-400"></i>
+                        <div>
+                            <div class="font-medium">Generative AI for Product Managers</div>
+                            <div class="text-sm text-zinc-400">LinkedIn Learning</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-6 items-center bg-zinc-900 rounded-3xl px-8 py-6">
+                        <i class="fas fa-certificate text-4xl text-yellow-400"></i>
+                        <div>
+                            <div class="font-medium">Consulting Foundations</div>
+                            <div class="text-sm text-zinc-400">KPMG</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="connect" class="py-24 bg-gradient-to-b from-transparent via-yellow-400/5 to-transparent">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <div class="text-yellow-400 text-sm uppercase tracking-[3px] mb-6">Let’s build something incredible</div>
+            <h2 class="text-5xl font-bold tracking-tighter logo-font">Ready to collaborate or learn together?</h2>
+            
+            <div class="mt-16 flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="mailto:prateekdutta2001@gmail.com" 
+                   class="px-10 py-6 bg-white text-black font-semibold rounded-3xl text-lg flex items-center justify-center gap-x-3 hover:scale-105 transition">
+                    <i class="fas fa-paper-plane"></i>
+                    Send me an email
+                </a>
+                
+                <a href="https://topmate.io/prateek_dutta" target="_blank"
+                   class="px-10 py-6 border-2 border-yellow-400 text-yellow-400 font-semibold rounded-3xl text-lg flex items-center justify-center gap-x-3 hover:bg-yellow-400 hover:text-black transition">
+                    <i class="fas fa-calendar-check"></i>
+                    Book a 1:1 session on Topmate
+                </a>
+            </div>
+            
+            <div class="mt-16 text-xs text-zinc-500 flex flex-wrap justify-center gap-x-8 gap-y-2">
+                <a href="https://www.linkedin.com/in/prateek-dutta-3622821a1/" target="_blank" class="hover:text-yellow-400">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=7r9YlCsAAAAJ&amp;hl=en" target="_blank" class="hover:text-yellow-400">Google Scholar</a>
+                <a href="https://prateekdutta2001.github.io/portfolio/" target="_blank" class="hover:text-yellow-400">Portfolio</a>
+                <a href="https://topmate.io/prateek_dutta" target="_blank" class="hover:text-yellow-400">Topmate</a>
+                <!-- <a href="tel:+917879362381" class="hover:text-yellow-400">+91 78793 62381</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-500">
+            © 2026 Prateek Dutta • Built with passion for AI • 
+            <span class="text-yellow-400">Bengaluru, Karnataka</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
