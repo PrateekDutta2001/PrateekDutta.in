@@ -11,7 +11,7 @@ A personal one-page portfolio, built using Tailwind CSS and custom HTML/CSS/JS, 
 
 ## Accessibility
 
-Get access: https://prateekdutta2001.github.io/PrateekDutta.in/
+Get access: https://doi.org/10.5281/zenodo.21723157
 
 ## 🎯 Notes
 
